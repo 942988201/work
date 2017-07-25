@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+		<style type="text/css">
+			.p1{
+				width: 160px;
+				text-align: center;
+				position: relative;
+				z-index: 1;
+				font-weight: 900;
+				top: -43px;
+				left: 0px;
+				background: white;
+			}
+			.p2{
+				width: 180px;
+				text-align: center;
+				position: relative;
+				z-index: 1;
+				font-weight: 900;
+				top: 74px;
+				left: 0px;
+				background: white;
+			}
+			span{
+				text-decoration: line-through;
+			}
+			.opacity{
+				width: 100%;
+				height: 100%;
+				position: fixed;
+				overflow: hidden;
+				top: 0;
+				left: 0;
+				bottom: 0;
+				right: 0;
+				background: yellow;
+			}
+			.body_no_scroll {
+			    width: 100%;
+			    height: 100%;
+			    overflow: hidden;
+			}
+		</style>
+	</head>
+	<body>
+		<video width="300px" src="http://video.yuntoo.com/dist/45a883d4-6e59-4e19-bb03-dab0091fc8fa.mp4" controls="controls">
+
+					</video>
+		<img src="微信图片_20170627115514.jpg"/>
+		<p class="p1"></p>
+		<p class="p2"></p>
+		<img src="20170508101245_66529.jpg"/>
+		<img src="a1ec08fa513d2697691ec18c53fbb2fb4216d816.jpg"/>
+		<br />
+		<img src="ccdebc13172e80040b73e57f07b0da3d_755e08b1cb1349546c4e5b0a504e9258d0094a89.jpg" width="180px"/><br />
+		<input type="" name="text1" id="text1" value="" class="" /><br />
+		<input type="" name="text2" id="text2" value="" class="" />
+		<div style="font-size: 100px;" class="fontsize100">
+			g
+		</div>
+		<div class="opacity">
+			
+		</div>
+	</body>
+	<script type="text/javascript">
+		
+		$("img").click(function(){
+			document.body.style.overflow = 'hidden';
+function _preventDefault(e) { e.preventDefault(); }
+window.addEventListener('touchmove', _preventDefault);
+			//$('body').addClass("body_no_scroll")
+		})
+		$("div.opacity").click(function(){
+			alert(123123)
+		})
+		$("#text1").keyup(function(e){
+			if(e.keyCode==13){
+			$(".p1").html($("#text1").val())	
+			}
+		})
+		$("#text2").keyup(function(e){
+			if(e.keyCode==13){
+			$(".p2").html($("#text2").val())	
+			}
+		})
+		for(i=0;i<10;i++){
+		$('.fontsize100').append("<p>"+i+"</p>")
+			
+		}
+
+		
+	</script>
+</html>
