@@ -47,9 +47,6 @@
 		</style>
 	</head>
 	<body>
-		<video width="300px" src="http://video.yuntoo.com/dist/45a883d4-6e59-4e19-bb03-dab0091fc8fa.mp4" controls="controls">
-
-					</video>
 		<img src="微信图片_20170627115514.jpg"/>
 		<p class="p1"></p>
 		<p class="p2"></p>
@@ -65,17 +62,20 @@
 		<div class="opacity">
 			
 		</div>
+		<video width="300px" src="http://video.yuntoo.com/dist/45a883d4-6e59-4e19-bb03-dab0091fc8fa.mp4" controls="controls">
+
+					</video>
 	</body>
 	<script type="text/javascript">
 		
 		$("img").click(function(){
 			document.body.style.overflow = 'hidden';
-function _preventDefault(e) { e.preventDefault(); }
-window.addEventListener('touchmove', _preventDefault);
-			//$('body').addClass("body_no_scroll")
+			function _preventDefault(e) { e.preventDefault(); }
+			window.addEventListener('touchmove', _preventDefault);
 		})
 		$("div.opacity").click(function(){
-			alert(123123)
+			document.body.style.overflow = 'auto';
+			window.removeEventListener('touchmove', _preventDefault);
 		})
 		$("#text1").keyup(function(e){
 			if(e.keyCode==13){
